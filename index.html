@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .apartment {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .apartment img {
+            max-width: 100px;
+        }
+
+        #updateForm {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Apartment Management</h2>
+
+    <!-- Add New Apartment Form -->
+    <form id="addForm">
+        <input type="text" id="apartmentName" placeholder="Apartment Name" required><br><br>
+        <input type="number" id="apartmentPrice" placeholder="Price" required><br><br>
+        <textarea id="apartmentDescription" placeholder="Description" required></textarea><br><br>
+        <input type="file" id="imageUpload" accept="image/*"><br><br>
+        <button type="submit">Add Apartment</button>
+    </form>
+
+    <h3>Apartment List</h3>
+    <div id="apartmentList"></div>
+
+    <!-- Update Apartment Form -->
+    <form id="updateForm">
+        <input type="text" id="updateName" placeholder="Apartment Name" required><br><br>
+        <input type="number" id="updatePrice" placeholder="Price" required><br><br>
+        <textarea id="updateDescription" placeholder="Description" required></textarea><br><br>
+        <input type="file" id="updateImageUpload" accept="image/*"><br><br>
+        <button type="submit">Update Apartment</button>
+    </form>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
